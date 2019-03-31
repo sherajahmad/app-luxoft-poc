@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+.nav-tabs { border-bottom: 2px solid #DDD; }
+.nav-tabs > li > a {
+    border: none;
+    color: #666;
+}
+.nav-tabs > li.nav-item > a,
+.nav-tabs > li.nav-item > a:hover {
+    border: none;
+    color: #4285F4 !important;
+    background: transparent;
+    position: relative;
+}
+.nav-tabs > li.nav-item > a::after {
+    content: "";
+    background: #4285F4;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+.nav-tabs > li.nav-item > a.active::after,
+.nav-tabs > li.nav-item:hover > a::after {
+    transform: scale(1);
+}
+
+.card {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
